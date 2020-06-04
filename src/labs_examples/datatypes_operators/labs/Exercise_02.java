@@ -23,7 +23,13 @@ public class Exercise_02 {
 
     public static void main(String[] args) {
 
-        // write code here
+        int intWidening = 10;
+        double doubleWidening = intWidening;
+        System.out.println("doubleWidening = " + doubleWidening);
+
+        double doubleNarrowing = 10.5;
+        int intNarrowing = (int) doubleNarrowing;
+        System.out.println("intNarrowing = " + intNarrowing);
 
     }
 }

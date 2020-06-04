@@ -12,7 +12,9 @@ public class Exercise_06 {
 
     public static void main(String[] args) {
 
-        // write code here
+        double cylinderArea = 2 * 3.14 * (3.14 * 3.14) + 2 * ( 3.14 * 3.14 * 5);
+
+        System.out.println(cylinderArea);
 
     }
 }
