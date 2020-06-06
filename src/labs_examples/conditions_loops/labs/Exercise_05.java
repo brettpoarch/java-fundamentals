@@ -1,5 +1,8 @@
 package labs_examples.conditions_loops.labs;
 
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 /**
  * Conditions and Loops Exercise 5: Calculator
  *
@@ -16,4 +19,26 @@ package labs_examples.conditions_loops.labs;
  */
 
 public class Exercise_05 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input two numbers");
+        System.out.print("Input the larger number: ");
+        float largerNum = scanner.nextInt();
+        System.out.print("Input the smaller number: ");
+        float smallNum = scanner.nextInt();
+        float count = largerNum - smallNum;
+        float sum = 0;
+        float average = 0;
+
+        for (float i = smallNum; i <= largerNum; i++) {
+            sum += i;
+        }
+
+        average = sum / count;
+
+        System.out.println("sum = " + sum);
+        System.out.println("average = " + average);
+    }
 }
