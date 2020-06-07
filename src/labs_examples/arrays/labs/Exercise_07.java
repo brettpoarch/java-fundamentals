@@ -1,5 +1,7 @@
 package labs_examples.arrays.labs;
 
+import java.util.ArrayList;
+
 /**
  *  ArrayLists
  *
@@ -10,4 +12,25 @@ package labs_examples.arrays.labs;
  *
  */
 public class Exercise_07 {
+
+    public static void main(String[] args) {
+        ArrayList<String> family = new ArrayList<String>();
+
+        family.add("Brett");
+        family.add("Regina");
+        family.add("Behr");
+        family.add("Bochy");
+
+        for (String person : family) {
+            System.out.println(person);
+        }
+
+        boolean behr = family.contains("Behr");
+
+        System.out.println(behr);
+
+
+
+
+    }
 }

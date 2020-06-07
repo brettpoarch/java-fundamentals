@@ -3,6 +3,7 @@ package labs_examples.arrays.examples;
 // A simple automated telphone directory.
 class Phone {
     public static void main(String args[]) {
+
         String numbers[][] = {
                 { "Tom", "555-3322" },
                 { "Mary", "555-8976" },
@@ -12,7 +13,7 @@ class Phone {
         int i;
 
         if(args.length != 1)
-            System.out.println("Usage: java Phone <name>");
+            System.out.println("Usage: java Phone <name>" + args.length);
         else {
             for(i=0; i<numbers.length; i++) {
                 if(numbers[i][0].equals(args[0])) {
