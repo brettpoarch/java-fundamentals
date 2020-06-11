@@ -13,13 +13,17 @@ public class Excercise_01_Plane {
 
         Plane myPlane = new Plane(passengersOnFlight, myDestination, myDepartureCity, tripDelayed, 150_000, "full");
 
-        System.out.println("My trip from " + myPlane.departureCity.departure + " to "
-                + myPlane.destinationCity.destination + " with " +  myPlane.passengers.passengers +
+        System.out.println("My trip from " + myPlane.departureCity.getDeparture() + " to "
+                + myPlane.destinationCity.getDestination() + " with " +  myPlane.passengers.getPassengers() +
                 " passengers on board has a " + myPlane.currentFuelLevel + " tank of " +
                 myPlane.fuelCapacity + " liters of fuel and has a delayed status of " +
-                myPlane.delayed.isDelayed);
+                myPlane.delayed.isDelayed());
 
         System.out.println(myPlane.toString());
+        System.out.println(tripDelayed.toString());
+        System.out.println(passengersOnFlight.toString());
+        System.out.println(myDestination.toString());
+        System.out.println(myDepartureCity.toString());
     }
 
 }
@@ -57,10 +61,18 @@ class Plane {
 
 class Passengers {
 
-    int passengers;
+    private int passengers;
 
-    public Passengers(int passengers) {
+    public int getPassengers() {
+        return passengers;
+    }
+
+    public void setPassengers(int passengers) {
         this.passengers = passengers;
+    }
+
+    public Passengers(int howManyPassengers) {
+        setPassengers(howManyPassengers);
     }
 
     @Override
@@ -73,10 +85,18 @@ class Passengers {
 
 class DestinationCity {
 
-    String destination;
+    private String destination;
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
 
     public DestinationCity(String destination) {
-        this.destination = destination;
+        setDestination(destination);
     }
 
     @Override
@@ -89,10 +109,18 @@ class DestinationCity {
 
 class DepartureCity {
 
-    String departure;
+    private String departure;
+
+    public String getDeparture() {
+        return departure;
+    }
+
+    public void setDeparture(String departure) {
+        this.departure = departure;
+    }
 
     public DepartureCity(String departure) {
-        this.departure = departure;
+        setDeparture(departure);
     }
 
     @Override
@@ -105,10 +133,18 @@ class DepartureCity {
 
 class Delayed {
 
-    boolean isDelayed;
+    private boolean isDelayed;
+
+    public boolean isDelayed() {
+        return isDelayed;
+    }
+
+    public void setDelayed(boolean delayed) {
+        isDelayed = delayed;
+    }
 
     public Delayed(boolean isDelayed){
-        this.isDelayed = isDelayed;
+        setDelayed(isDelayed);
     }
 
     @Override
